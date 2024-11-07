@@ -14,9 +14,6 @@ import time
 from openai import OpenAI
 import app.ottle.test_functions as functions
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 GENERATE_TIME=25
 open_api = os.getenv()
