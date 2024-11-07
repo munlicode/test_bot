@@ -3,12 +3,12 @@ import requests
 import os
 from openai import OpenAI
 from app.ottle.prompts import assistant_instructions
+import os
+from dotenv import load_dotenv
 
-OPENAI_API_KEY ="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"                    # os.environ['OPENAI_API_KEY']
-FRONTPAD_API_KEY ="" # os.environ['']
+load_dotenv()
 
-# Init OpenAI Client
-client = OpenAI(api_key=OPENAI_API_KEY)
+FRONTPAD_API_KEY =os.getenv("FRONTPAD_API_KEY") # os.environ['AIRTABLE_API_KEY']
 
 
 # Add lead to Airtable

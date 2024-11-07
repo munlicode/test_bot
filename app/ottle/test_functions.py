@@ -3,8 +3,12 @@ import requests
 import os
 from openai import OpenAI
 from app.ottle.prompts import assistant_instructions
+from dotenv import load_dotenv
 
-OPENAI_API_KEY ="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"
+load_dotenv()
+
+# Ensure that the OpenAI API key is securely retrieved from an environment variable
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Init OpenAI Client
 client = OpenAI(api_key=OPENAI_API_KEY)

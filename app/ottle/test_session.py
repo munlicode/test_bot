@@ -5,10 +5,13 @@ import time
 from openai import OpenAI
 import app.ottle.test_functions as functions
 import traceback
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 GENERATE_TIME=25
-open_api="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"
+open_api=os.getenv("OPENAI_API_KEY")
 
 # Initialize OpenAI client
 client = OpenAI(api_key=open_api)
