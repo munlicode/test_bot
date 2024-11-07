@@ -1,0 +1,21 @@
+30.10.2024 - 10:50
+session
+    Issue I currently encounter is that it starts collection of data only after order is made, so doesn't collect any before after asked phone number.
+    I come up with 2 ways to resolve it. 
+    First, is to run requires_action from the begining of conversation. That will create leads all the time. But I will have to collect all data, such as messages, report
+
+    Second, is to send all threads to requires_action to create order. 
+
+30.10.2024 - 17:33 
+There is an issue, that should be resolved. The issue is that there is no time wait between messages and they are not stored, so if user sends one message, and then sends another one. 
+He answers only to second.
+
+I need to implement it as soon as possible, because I am kind of bored, keeping in the same place:
+    1. Deffining by area
+    2. gap beetween messages
+    3. flask application
+    4. report messages
+    5. Website
+    6. something
+    7. queue algorithm in whatsapp or views to handle coherence batches of messages
+    and queue in send message
