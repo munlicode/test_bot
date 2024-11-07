@@ -16,10 +16,9 @@ import app.ottle.test_functions as functions
 import os
 
 GENERATE_TIME=25
-open_api = os.getenv()
 
 # Initialize OpenAI client
-client = OpenAI(api_key=open_api)
+client = OpenAI(api_key=app.config["OPENAI_API_KEY"])
 
 # In-memory session storage
 user_sessions = {}
